@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        
+  <!--  this is define value using tag    
+     <bean class="com.springcore.springcore.Student" name="student1">
+		<property name="stdId">
+			<value>67242</value>
+		</property>
+		<property name="stdName">
+			<value>Arshad Ahmad</value>
+		</property>
+        <property name="stdAdress">
+			<value>Delhi</value>
+		</property>
+	 </bean>
+   -->
+   
+     <!--  this is define value using attribute  -->  
+     <bean class="com.springcore.springcore.Student" name="student1">
+		<property name="stdId" value="670042"/>	
+		
+		<property name="stdName" value="Arshad Ahmad"/>
+	
+        <property name="stdAdress" value="Delhi"/>
+	
+	 </bean>
+	 
+	  <!--  this is second bean file using attribute  -->  
+     <bean class="com.springcore.springcore.Student" name="student2">
+		<property name="stdId" value="7688"/>	
+		
+		<property name="stdName" value="Arfat Ahmad"/>
+	
+        <property name="stdAdress" value="Maujpur"/>
+	
+	 </bean>
+	 
+	 <!--  here is more consice Bean code using p schema -->  
+	 <bean class="com.springcore.springcore.Student" name="student3" p:stdId="867" p:stdName="Gajji" p:stdAdress="Delhi"/>
+		
+	
+   
+</beans>
