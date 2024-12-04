@@ -7,7 +7,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        ApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/springcore/collection/Collection_config.xml");
+        ApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/springcore/collection/collection_config.xml");
         Emp emp1=(Emp)context.getBean("Emp1");
         System.out.println(emp1.getName());
         System.out.println(emp1.getPhones());

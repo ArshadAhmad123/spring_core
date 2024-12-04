@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- here is c schema working good -->
+    <bean class="com.springcore.springcore.constuctror_injuction.Address" id="address1" c:city="delhi"/>
+
+
+    <!-- Define Person beans using constructor-arg -->
+    <bean class="com.springcore.springcore.constuctror_injuction.Person" id="person1">
+        <constructor-arg value="durgesh"/>
+        <constructor-arg value="23"/>
+        <constructor-arg ref="address1"/>
+    </bean>
+
+    <bean class="com.springcore.springcore.constuctror_injuction.Person" id="person2">
+        <constructor-arg value="arshad"/>
+        <constructor-arg value="76"/>
+        <constructor-arg ref="address1"/>
+    </bean>
+
+    <!--  c schema not working with ref bean. I have to ask to the teacher-->
+<!--    <bean class="com.springcore.springcore.constuctror_injuction.Person" id="person3" c:name="arshad" c:personId="65" c:adress-ref="address1"/>-->
+</beans>
