@@ -24,6 +24,17 @@
         <constructor-arg value="76"/>
         <constructor-arg ref="address1"/>
     </bean>
+    
+    <!-- this bean is for Addition and also resloving ambiguity problem clearly-->
+    <!-- yaha par dekho ki kon se constructor ko priority milegi-->
+    <!-- agar mere constructor main String type ka parameter koi bhi ek para meter hai 
+    toh kuch bhi check nahi karega bass string constructor ko call karega kyon ki yaha 
+    (xml) file mein by default string value pass hoti hai-->
+    <!-- agar string se match nahi karta toh phir check karega another type -->
+    <bean class="com.springcore.springcore.constuctror_injuction.Addition" id="addition">
+        <constructor-arg value="12"/>
+        <constructor-arg value="76"/>
+    </bean>
 
     <!--  c schema not working with ref bean. I have to ask to the teacher-->
 <!--    <bean class="com.springcore.springcore.constuctror_injuction.Person" id="person3" c:name="arshad" c:personId="65" c:adress-ref="address1"/>-->

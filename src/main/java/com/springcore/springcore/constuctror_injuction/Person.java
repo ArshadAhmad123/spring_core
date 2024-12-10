@@ -1,9 +1,13 @@
 package com.springcore.springcore.constuctror_injuction;
 
 public class Person {
+	
 private String name;
+
 private int personId;
+
 private Address adress;
+
 public Person(String name, int personId, Address adress) {
 	super();
 	this.name = name;

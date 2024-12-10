@@ -9,9 +9,12 @@ public class Test {
 		// TODO Auto-generated method stub
         ApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/springcore/constuctror_injuction/constructor_config.xml");
 	     Person p = (Person)context.getBean("person1");
-	     System.out.println(p);
+	     //System.out.println(p);
 	     Person p1 = (Person)context.getBean("person2");
-	     System.out.println(p1);
+	    // System.out.println(p1);
+	      
+	     Addition addition = (Addition)context.getBean("addition");
+	    addition.sum();
 	}
 
 }
