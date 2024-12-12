@@ -35,6 +35,18 @@
         <constructor-arg value="12"/>
         <constructor-arg value="76"/>
     </bean>
+    
+    <!-- here we can give proper parameter type to match the constructor-->
+    <bean class="com.springcore.springcore.constuctror_injuction.Addition" id="addition1">
+        <constructor-arg value="12" type="int"/>
+        <constructor-arg value="76" type="int"/>
+    </bean>
+    
+    <!-- you can change order of parameter-->
+      <bean class="com.springcore.springcore.constuctror_injuction.Addition" id="addition2">
+        <constructor-arg value="12" type="int" index="1"/>
+        <constructor-arg value="76" type="int" index="0"/>
+    </bean>
 
     <!--  c schema not working with ref bean. I have to ask to the teacher-->
 <!--    <bean class="com.springcore.springcore.constuctror_injuction.Person" id="person3" c:name="arshad" c:personId="65" c:adress-ref="address1"/>-->

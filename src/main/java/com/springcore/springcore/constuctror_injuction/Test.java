@@ -12,9 +12,12 @@ public class Test {
 	     //System.out.println(p);
 	     Person p1 = (Person)context.getBean("person2");
 	    // System.out.println(p1);
-	      
 	     Addition addition = (Addition)context.getBean("addition");
-	    addition.sum();
+		 addition.sum(); 
+	     Addition addition1 = (Addition)context.getBean("addition1");
+	     addition1.sum();
+	     Addition addition2 = (Addition)context.getBean("addition2");
+	     addition2.sum();
 	}
 
 }
