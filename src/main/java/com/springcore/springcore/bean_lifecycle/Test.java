@@ -29,6 +29,8 @@ public class Test {
 		context.registerShutdownHook();
 		Samosa samosa= (Samosa)context.getBean("user1");
         System.out.println(samosa);
+        Pepsi pepsi = (Pepsi)context.getBean("user2");
+        System.out.println(pepsi);
 	}
 
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+        
+    
+     <bean class="com.springcore.springcore.autowiring.Address" name="adress">
+		<property name="street" value="gb road"/>
+		<property name="city" value="delhi"/>
+	 </bean>
+	 <!-- byname ye name se check karega ki kya jo Emp class ke ander adress name se obj hai woh bean main bhi hai 
+  <bean class="com.springcore.springcore.autowiring.Emp" name="std1" autowire="byName"/>
+		-->
+		
+		
+		<!-- byName and byType dono hi setter injuction use karte hai.. 
+		 byType check karta hai ki kya jis type obj inject karna hai uss type ka koi
+		 bean hai agar do milte hai toh ye exception deta hai agar ek hai toh usko
+		 inject kar deta hai
+  <bean class="com.springcore.springcore.autowiring.Emp" name="std2" autowire="byType"/> -->
+  
+  
+	 <!-- constructor ye constructor use karega property inject karne ke liye. 
+	 isme naam bhi check karega lekin constructor ka use karke injection-->
+     <bean class="com.springcore.springcore.autowiring.Emp" name="std2" autowire="constructor"/>
+
+	
+   
+</beans>

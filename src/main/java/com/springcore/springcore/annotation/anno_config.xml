@@ -7,14 +7,15 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
+        
+          <!-- this is for enable all annotation -->
+           <context:annotation-config/>
            
-     <bean class="com.springcore.springcore.bean_lifecycle.Samosa" name="user1" init-method="init" destroy-method="destroy">
-		<property name="price" value="8"/>
+           
+     <bean class="com.springcore.springcore.annotation.Example" name="student1" >
+		<property name="subject" value="maths"/>
 	 </bean>
-	 <bean class="com.springcore.springcore.bean_lifecycle.Pepsi" name="user2">
-		<property name="price"  value="20"/>
-	 </bean>
-   
+	
    
 
 </beans>

@@ -11,6 +11,9 @@
      <bean class="com.springcore.springcore.bean_lifecycle.Samosa" name="user1" init-method="init" destroy-method="destroy">
 		<property name="price" value="8"/>
 	 </bean>
+	 <bean class="com.springcore.springcore.bean_lifecycle.Pepsi" name="user2">
+		<property name="price"  value="20"/>
+	 </bean>
    
    
 
