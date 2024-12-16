@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+      	<!-- To use standalone we have to add util schema and its location-->  
+      	<!-- xmlns:util="http://www.springframework.org/schema/util"-->
+      	<!-- this is location-->
+        <!-- http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd--> 
+        
+         <!-- standalone list-->
+         <util:list list-class="java.util.LinkedList" id="myfriends">
+			<value>Arshad</value>
+			<value>Arfat</value>
+			<value>Tariq</value>
+		 </util:list>
+         
+         <util:map map-class="java.util.HashMap" id="courses">
+			<entry key="java" value="35000"/>
+			<entry key="php" value="15000"/> 
+			<entry key="python" value="13000"/> 
+			
+		 </util:map>
+		 
+		 
+		 <!-- iska koi implementation nahi hai ye ek class hi hai toh class name nahi dena hai-->
+		 <util:properties id="dbconfig">
+			<prop key="driver">com.jdbc.mysql.driver</prop>
+			<prop key="username">arshad</prop>
+			<prop key="password">abc</prop>
+			<prop key="url">mysql.jdbc://localhost:3306/database</prop>
+			
+		 </util:properties>
+         
+         
+     <bean class="com.springcore.springcore.standalone.collections.Person" name="person1">
+		<property name="friends">
+			<ref bean="myfriends"/>
+		</property>
+		
+	 </bean>
+	 
+	  <bean class="com.springcore.springcore.standalone.collections.Person" name="person2">
+		     <property name="feeStructure" ref="courses"/>
+		     <property name="properties" ref="dbconfig"/>
+      </bean>
+
+
+   
+</beans>

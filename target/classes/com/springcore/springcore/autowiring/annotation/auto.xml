@@ -10,21 +10,30 @@
        
     <context:annotation-config/> 
     
-     <!--     yaha par tum kuch bhi naam de sakte ho kyon ki yaha par ye type annotation use kar raha hai
+     <!--  yaha par tum kuch bhi naam de sakte ho kyon ki yaha par ye type annotation use kar raha hai
  ye bean injection constructor se hoga
  -->
- 
-     <bean class="com.springcore.springcore.autowiring.annotation.Address" name="address23">
+                 
+        <bean class="com.springcore.springcore.autowiring.annotation.Address" name="address1">
 		<property name="street" value="gb road"/>
 		<property name="city" value="delhi"/>
 	 </bean>
-	
-	<bean class="com.springcore.springcore.autowiring.annotation.Depart" name="depart">
+	 
+	    <bean class="com.springcore.springcore.autowiring.annotation.Address" name="address2">
+		<property name="street" value="Meerut road"/>
+		<property name="city" value="muradabaad"/>
+	 </bean>
+	 
+	 <bean class="com.springcore.springcore.autowiring.annotation.Depart" name="depart1">
+		<property name="section" value="B"/>
+	 </bean>
+	 
+	 <bean class="com.springcore.springcore.autowiring.annotation.Depart" name="depart2">
 		<property name="section" value="A"/>
-		
 	 </bean>
 		
 		
+   
      <bean class="com.springcore.springcore.autowiring.annotation.Emp" name="std2" />
 
 	

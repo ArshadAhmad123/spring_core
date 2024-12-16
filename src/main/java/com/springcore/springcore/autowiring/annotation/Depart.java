@@ -1,6 +1,7 @@
 package com.springcore.springcore.autowiring.annotation;
 
 public class Depart {
+	
      private String section;
 
 	public String getSection() {

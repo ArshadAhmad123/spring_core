@@ -1,11 +1,14 @@
 package com.springcore.springcore.autowiring.annotation;
 
 public class Address {
+	
      private String street;
      private String city;
-	public String getStreet() {
-		return street;
-	}
+     
+	 public String getStreet() {
+	  	return street;
+	 }
+	
 	public Address(String street, String city) {
 		super();
 		this.street = street;
@@ -16,16 +19,20 @@ public class Address {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void setStreet(String street) {
 		this.street = street;
 		System.out.println("inside Address setter");
 	}
+	
 	public String getCity() {
 		return city;
 	}
+	
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 	@Override
 	public String toString() {
 		return "Address [street=" + street + ", city=" + city + "]";
