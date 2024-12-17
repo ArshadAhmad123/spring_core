@@ -13,7 +13,7 @@
         
         <!-- this is injecting bean without using bean tag -->
         <!-- to use stereotype component we have to use this tag-->
-     <context:component-scan base-package="com.springcore.springcore.sterotype"/>
+     <context:component-scan base-package="com.springcore.springcore.bean_scope"/>
 	 
 	 
 	 <!-- mujhe collection ke liye standalone scema add karna hoga matlab util jo phir baad mein
@@ -26,5 +26,6 @@
 			<value>792879870</value><value>87648723</value>
 		</util:list>
        
+    <bean class="com.springcore.springcore.bean_scope.Teacher" id="teacher" scope="prototype"></bean>
 	   
 </beans>

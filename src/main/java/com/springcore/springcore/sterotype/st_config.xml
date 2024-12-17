@@ -3,14 +3,28 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:context="http://www.springframework.org/schema/context"
     xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd">
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
         
         <!-- this is injecting bean without using bean tag -->
         <!-- to use stereotype component we have to use this tag-->
      <context:component-scan base-package="com.springcore.springcore.sterotype"/>
 	 
-   
+	 
+	 <!-- mujhe collection ke liye standalone scema add karna hoga matlab util jo phir baad mein
+	 apne @value mein pass karoonga -->
+	 <!-- xmlns:util="http://www.springframework.org/schema/util"
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd-->
+        
+        <util:list list-class="java.util.ArrayList" id="tempList">
+			<value>792879870</value><value>87648723</value>
+		</util:list>
+       
+	   
 </beans>

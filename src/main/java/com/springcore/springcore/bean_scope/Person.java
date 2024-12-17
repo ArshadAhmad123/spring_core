@@ -1,11 +1,13 @@
-package com.springcore.springcore.sterotype;
+package com.springcore.springcore.bean_scope;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 //if we dont pass any name it will use camle case name of class name like person
 @Component("person1")
+@Scope("prototype")
 public class Person {
 	    @Value("arshad")
        private String name;

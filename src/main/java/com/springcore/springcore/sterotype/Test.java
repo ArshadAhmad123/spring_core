@@ -8,5 +8,12 @@ public class Test {
 	ApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/springcore/sterotype/st_config.xml");
        Person person=context.getBean("person1",Person.class);
        System.out.println(person);
+       
+//       bean scope
+//       Singleton
+//       prototype
+//       request
+//       session
+//       globelsession
    }
 }
