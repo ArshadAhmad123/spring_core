@@ -4,6 +4,7 @@ package com.springcore.springcore.remove_xml;
 //ye class without @component and @ComponentScan ke bina kaam karegi
 //kyon hum yaha bean annotation use kar rahe hai javaconfig class mein
 public class Student {
+	
     private Samosa samosa;
     
 	public Student(Samosa samosa) {
